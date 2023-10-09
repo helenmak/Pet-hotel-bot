@@ -107,8 +107,6 @@ const ProductList = () => {
           </div>
         )}
       </Modal>
-      
-      <div onClick={handleMainButtonClick}>Click</div>
     </div>
   );
 };

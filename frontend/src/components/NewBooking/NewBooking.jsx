@@ -1,6 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import Helmet                                    from 'react-helmet'
-import { useLocation }                            from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 import PlusIcon from '../../assets/plus-icon.svg'
 import MinusIcon from '../../assets/minus-icon.svg'
@@ -259,7 +258,7 @@ const NewBooking = () => {
         </div>
       </div>
       
-      <label className={styles.textareaLabel} for='comment'>
+      <label className={styles.textareaLabel} htmlFor='comment'>
         Additional information for pet sitter
       </label>
       <textarea
@@ -268,8 +267,6 @@ const NewBooking = () => {
         onChange={onChangeComment}
         id='comment'
       />
-      
-      <div onClick={() => confirmRequest(true)}>Confirm</div>
     </div>
   );
 };
