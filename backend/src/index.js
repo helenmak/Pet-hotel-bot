@@ -16,9 +16,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-let corsOptions = {
-  origin: '*',
-}
+let corsOptions = { origin: true, credentials: true }
+
 
 app.use(cors(corsOptions));
 
