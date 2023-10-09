@@ -21,10 +21,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.use('/', (req, res) => {
-  res.send('HElloe')
-})
-
 app.use('/booking', bookingRouter)
 
 petHotelBotTelegram.getUpdates()
@@ -40,6 +36,6 @@ console.log('connected to the SQlite database');
 initModels(db)
 
 
-const PORT = 80;
+const PORT = 3000;
 
-app.listen(PORT)
+app.listen(PORT, () => console.log(`server running on port ${PORT}`))
