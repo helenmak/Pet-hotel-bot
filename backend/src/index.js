@@ -21,6 +21,10 @@ app.use(cors({
   credentials: true
 }));
 
+app.use('/', (req, res) => {
+  res.send('HElloe')
+})
+
 app.use('/booking', bookingRouter)
 
 petHotelBotTelegram.getUpdates()
@@ -38,4 +42,4 @@ initModels(db)
 
 const PORT = 80;
 
-app.listen(PORT, () => console.log('server started on PORT ' + PORT))
+app.listen(PORT)
