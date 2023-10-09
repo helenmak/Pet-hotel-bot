@@ -1,9 +1,11 @@
+import config from '../../../config/index.js'
+
 import petHotelBotTelegram from '../../bots/petHotelBotTelegram.js'
 
-import AppError    from '../../models/AppError.js'
+import AppError from '../../models/AppError.js'
 
 
-const webAppUrl = 'https://nodejs-production-bbea.up.railway.app/'
+const webAppUrl = config.web_app_url
 
 export default async function handleStartMessage(msg) {
   try {

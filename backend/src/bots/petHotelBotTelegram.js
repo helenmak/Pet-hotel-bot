@@ -1,7 +1,6 @@
 import TelegramBot from '../infrastructure/telegramBot.js'
 
+import config from '../../config/index.js'
 
-const token = '6420452197:AAGLFpHJvZHDUCZy7596CEkHXYIJfHEqsyk';
 
-
-export default new TelegramBot(token);
+export default new TelegramBot(config.telegram_bot_token);

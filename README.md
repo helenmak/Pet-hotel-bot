@@ -22,44 +22,83 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Monorepo for Telegram Mini-App and Telegram Bot
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Welcome to the Monorepo for our Telegram Mini-App and Telegram Bot! This repository contains the source code for both the frontend and backend components of our Telegram application.
+Table of Contents
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    Project Overview
+    Folder Structure
+    Getting Started
+        Frontend
+        Backend
+    Contributing
+    License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Project Overview
 
-## Learn More
+Our project is divided into two main parts:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Frontend (Telegram Mini-App): This part of the application is responsible for the user interface of Telegram Bot Mini-App. It is built with React.
+    Backend (Telegram Bot): The backend of the Telegram Bot. It is implemented in Node.js.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Folder Structure
 
-### Code Splitting
+|-- frontend/
+|   |-- src/
+|   |-- public/
+|   |-- package.json
+|   |-- ...
+|-- backend/
+|   |-- src/
+|   |-- package.json
+|   |-- ...
+|-- README.md
+|-- LICENSE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Getting Started
 
-### Analyzing the Bundle Size
+To set up and run both the frontend and backend components, follow the instructions below:
+Frontend
+From the project root, navigate to the frontend directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    cd frontend
+    npm i
+    npm start
 
-### Making a Progressive Web App
+Access the Telegram Mini-App in your web browser at http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Backend
+From the project root, navigate to the backend directory:
 
-### Advanced Configuration
+    cd backend
+    npm i
+    npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+cd backend
 
-### Deployment
+Install the dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm install
 
-### `npm run build` fails to minify
+Configure your Telegram Bot token in a .env file:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+makefile
+
+TELEGRAM_BOT_TOKEN=your_bot_token_here
+
+Start the backend server:
+
+sql
+
+    npm start
+
+Your Telegram Bot should now be up and running, ready to respond to incoming messages.
+Contributing
+
+We welcome contributions from the community! If you'd like to contribute to this project, please follow our Contributing Guidelines.
+License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute the code as per the terms of the license.

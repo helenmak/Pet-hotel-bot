@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+import config from '../config'
 
-const baseURL = 'https://pethotelbot-production.up.railway.app'
+
+const baseURL = config.api_endpoint
 
 const api = axios.create({
   baseURL,
@@ -16,8 +18,7 @@ const api = axios.create({
 export default {
   createBooking: (data) => api.post(`/booking/create`, data).then(response => response.data),
   deleteBooking: (data) => api.post(`/booking/delete`, data).then(response => response.data),
-  listBookings: (userId) => api.get(`/booking/list`, { params: { user_id: 292143114 } }).then(response => {
-    console.log(response)
+  listBookings: (userId) => api.get(`/booking/list`, { params: { user_id: userId } }).then(response => {
     return response.data
   })
 }

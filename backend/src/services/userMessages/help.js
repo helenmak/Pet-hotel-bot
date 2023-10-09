@@ -1,5 +1,5 @@
 import petHotelBotTelegram from '../../bots/petHotelBotTelegram.js'
-import AppError    from '../../models/AppError.js'
+import AppError            from '../../models/AppError.js'
 
 
 export default async function handleHelpMessage(msg) {
