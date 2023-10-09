@@ -16,10 +16,13 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-let corsOptions = { origin: true, credentials: true }
+let corsOptions = { origin: 'localhost:3000', credentials: true }
 
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: '*',
+  credentials: false
+}));
 
 app.use('/booking', bookingRouter)
 
