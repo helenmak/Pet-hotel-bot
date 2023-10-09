@@ -3,21 +3,22 @@
 
 The application is divided into two main parts:
 
-    Frontend (Telegram Mini-App): This part of the application is responsible for the user interface of Telegram Bot Mini-App. It is built with React.
-    Backend (Telegram Bot): The backend of the Telegram Bot. It is implemented in Node.js.
+__Frontend (Telegram Mini-App)__: This part of the application is responsible for the user interface of Telegram Bot Mini-App. It is built with React.\
+__Backend (Telegram Bot)__: The backend of the Telegram Bot. It is implemented in Node.js.
 
 ## Getting Started
 
+__You must have at least node 16 to successfully run the application.__
+
 To set up and run both the frontend and backend components, follow the instructions below.
 
-! You must have at least node 16 to successfully run the application.
 
 ### Frontend
 From the project root, navigate to the frontend directory:
 
     cd frontend
 
-Configure your Telegram Bot server url in config files located at: [/src/config](/frontend/src/config).
+Configure your Telegram Bot server url in config files located at: [/frontend/src/config](/frontend/src/config).
 
 Install modules and launch the app:
 
