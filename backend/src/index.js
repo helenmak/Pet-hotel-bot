@@ -16,6 +16,12 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+let corsOptions = {
+  origin: '*',
+}
+
+app.use(cors(corsOptions));
+
 app.use('/booking', bookingRouter)
 
 petHotelBotTelegram.getUpdates()
