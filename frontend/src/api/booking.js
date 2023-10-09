@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const baseURL = 'http://pethotelbot-production.up.railway.app'
+const baseURL = 'https://pethotelbot-production.up.railway.app'
 
 const api = axios.create({
   baseURL,
