@@ -33,7 +33,7 @@ class Base {
   }
   
   static async findByField (field, value) {
-    const documents = await this.db.all(`SELECT * FROM ${this.name} WHERE ${field} = (?)`, value)
+    const documents = await this.db.all(`SELECT * FROM ${this.table} WHERE ${field} = (?)`, value)
     
 
     if (!documents) {
