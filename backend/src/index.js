@@ -32,6 +32,6 @@ console.log('connected to the SQlite database');
 initModels(db)
 
 
-const PORT = 8000;
+const PORT = 80;
 
 app.listen(PORT, () => console.log('server started on PORT ' + PORT))
