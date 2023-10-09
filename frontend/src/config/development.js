@@ -1,3 +1,3 @@
 export default {
-  "api_endpoint": 'http://localhost:8000'
+  "api_endpoint": 'https://pethotelbot-production.up.railway.app'
 }
