@@ -12,7 +12,7 @@ const AppContext = createContext(initialState)
 function useApp() {
   const [bookings, setBookings] = useState(null)
   
-  const {tg, user} = useTelegram()
+  const {user} = useTelegram()
   
   useEffect(() => {
     getBookings()
