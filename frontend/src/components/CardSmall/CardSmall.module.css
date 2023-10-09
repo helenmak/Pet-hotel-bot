@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  column-gap: 16px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.name {
+  font-size: 16px;
+}
+
+.text {
+  font-size: 14px;
+}

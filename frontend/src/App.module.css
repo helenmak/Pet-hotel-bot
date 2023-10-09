@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.app {
+  padding: 24px 0 24px 24px;
+}
+
+.app > * {
+  margin-right: 24px;
+}
+
+body {
+  background-color: var(--tg-theme-bg-color, #191919);
+  color: var(--tg-theme-text-color, white);
+  min-height: 100vh;
+}

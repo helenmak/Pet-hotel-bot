@@ -1,0 +1,26 @@
+.card {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.backgroundImage {
+  width: 100%;
+  background: var(--tg-theme-button-color, #8774E1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+
+.text {
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,26 @@
+.header {
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+
+.button {
+  border-radius: 16px;
+}
+
+
+.backWrapper {
+  width: 100%;
+}
+
+.close-btn-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.username {
+  display: flex;
+  justify-content: center;
+}

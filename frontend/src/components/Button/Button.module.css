@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background: var(--tg-theme-button-color, #31B545);
+  color: var(--tg-theme-button-text-color, white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.button:disabled {
+  background: var(--tg-theme-button-color, #31B545);
+  backdrop-filter: grayscale(1);
+  cursor: not-allowed;
+  filter: grayscale(75%);
+}
+
+.button:not(:disabled):active {
+  scale: 1.1;
+  transition: 0.1s;
+}
+

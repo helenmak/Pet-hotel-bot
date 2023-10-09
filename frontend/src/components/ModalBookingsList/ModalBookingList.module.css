@@ -1,0 +1,102 @@
+.modal {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: none !important;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  height: 100%;
+  background-color: var(--tg-theme-bg-color, #191919);
+  color: var(--tg-theme-text-color, white);
+  padding: 24px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 0 !important;
+}
+
+
+.closeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: transparent;
+  background-size: 50%;
+  border-radius: 50%;
+}
+
+.closeIcon {
+  width: 15px;
+  height: 15px;
+}
+
+.closeWrapper:active {
+  background: rgba(110, 110, 110, 0.3);
+  background-size: 100%;
+  scale: 1.1;
+  transition: 0.1s;
+  transform: translateY(-1px);
+}
+
+.closeWrapper:active .closeIcon {
+  scale: 0.9;
+  transition: 0.1s;
+}
+
+
+.bookingsWrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-bottom: 1px solid var(--tg-theme-text-color, rgba(89, 88, 88, 0.32));
+}
+
+.card {
+  width: 100%;
+  background-color: var(--tg-theme-bg-color, #191919);
+  /*background-image: linear-gradient(#191919, #191919);*/
+  /*background-blend-mode: exclusion;*/
+  color: var(--tg-theme-text-color, white);
+  overflow: hidden;
+  padding: 12px;
+  border-top: 1px solid var(--tg-theme-text-color, rgba(89, 88, 88, 0.32));
+}
+
+.deleteAction {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  justify-content: center;
+  background: red;
+  cursor: pointer;
+}
+
+.deleteIconWrapper {
+  width: 44px;
+  height: 44px;
+}
+
+.deleteIcon {
+  width: 100%;
+  height: 100%;
+}
+
+
+.phone {
+  margin-top: 8px;
+}

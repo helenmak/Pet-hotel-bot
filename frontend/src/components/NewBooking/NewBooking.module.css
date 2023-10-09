@@ -1,0 +1,107 @@
+.requestSitting {
+  display: flex;
+  flex-direction: column;
+}
+
+.upperNote {
+  opacity: 0.6;
+}
+
+.card {
+  display: flex;
+  column-gap: 16px;
+  margin: 12px 0 32px;
+}
+
+.priceHour {
+  opacity: 0.8;
+  margin-left: 8px;
+}
+
+
+.fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 16px;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--tg-theme-secondary-bg-color, #212121);
+  align-items: center;
+  column-gap: 16px;
+  border-radius: 8px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 8px 0 0;
+  font-size: 20px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  column-gap: 16px;
+}
+
+.input {
+  width: 172px;
+  padding: 8px calc(44px + 8px);
+  background: transparent;
+  height: 44px;
+  margin-top: 14px;
+  color: var(--tg-theme-text-color, white);
+  border: none;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.input:focus {
+  border: none;
+  outline: none;
+}
+
+.inputButtonDecrease {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.inputButtonIncrease {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+
+.textareaLabel {
+  margin-top: 32px;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.textarea {
+  width: 100%;
+  height: max-content;
+  min-height: 120px;
+  background: var(--tg-theme-secondary-bg-color, #212121);
+  color: var(--tg-theme-text-color, white);;
+  border: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  text-align: left;
+  resize: vertical;
+}

@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card:active {
+  scale: 0.96;
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+.image {
+  position: relative;
+  height: 280px;
+  margin: 0 auto;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  flex-direction: column;
+  row-gap: 4px;
+  padding: 16px 24px;
+  box-shadow: 0 1px 20px rgba(50, 50, 50, 0.5);
+  background: rgba(23, 23, 23, 0.6);
+  transition: 1s;
+  width: 100%;
+  color: white;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 1.2em;
+}
+
+
+.categories {
+  display: flex;
+  column-gap: 8px;
+  margin: 8px 0 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 4px 12px 5px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  color: #191919;
+  font-weight: 500;
+}
+
+
+.priceHour {
+  opacity: 0.8;
+  margin-left: 8px;
+}
+
+
+.addBtn {
+  width: 100%;
+}
+
+
+
