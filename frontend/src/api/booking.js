@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const baseURL = 'https://9fec-94-178-147-166.ngrok-free.app'
+const baseURL = 'http://pethotelbot-production.up.railway.app'
 
 const api = axios.create({
   baseURL,

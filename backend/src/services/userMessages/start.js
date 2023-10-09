@@ -3,7 +3,7 @@ import petHotelBotTelegram from '../../bots/petHotelBotTelegram.js'
 import AppError    from '../../models/AppError.js'
 
 
-const webAppUrl = 'https://47e1-94-178-147-166.ngrok-free.app'
+const webAppUrl = 'https://nodejs-production-bbea.up.railway.app/'
 
 export default async function handleStartMessage(msg) {
   try {
