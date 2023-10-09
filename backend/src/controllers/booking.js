@@ -13,6 +13,8 @@ async function create (req, res) {
 async function list (req, res) {
   let userId = req.query.user_id
   
+  console.log('list', userId)
+  
   try {
     const data = await services.booking.list(userId)
   
