@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import { useLocation } from 'react-router-dom'
+import classnames from 'classnames'
 
 import PlusIcon from '../../assets/plus-icon.svg'
 import MinusIcon from '../../assets/minus-icon.svg'
@@ -30,6 +31,8 @@ const getTime = (days, hours) => {
   return `${timeDays}${connector}${timeHours}`
 }
 
+const additionalInfoPresets = ['separate enclosure', 'special feeding', 'medication', 'do training', 'do grooming']
+
 const NewBooking = () => {
   const [days, setDays] = useState(1);
   const [hours, setHours] = useState(null);
@@ -37,6 +40,7 @@ const NewBooking = () => {
   const [hoursInputValue, setHoursInputValue] = useState(null);
   const [comment, setComment] = useState(null);
   const [totalPrice, setTotalPrice] = useState(null)
+  const [activePresets, setActivePresets] = useState([])
   
   const {tg, user, queryId} = useTelegram();
   
@@ -136,6 +140,37 @@ const NewBooking = () => {
   
   const handleChangeHours = useCallback(debounce(handleChangeHoursInput, 250), [])
   
+  const handleAdditionalInfoPresetClick = (preset) => {
+    const presetIndexInComment = comment?.indexOf(preset)
+    const isCommaAfterPreset = comment?.[presetIndexInComment + preset.length] === ','
+    
+    if (presetIndexInComment > (-1)) {
+      const presetToRemove = isCommaAfterPreset ? `${preset},` : preset
+      const nextComment = comment.replace(presetToRemove, '')
+  
+      const trimmedNextComment = nextComment?.trim()
+
+      if (trimmedNextComment === ',') setComment('')
+      else if (trimmedNextComment?.[0] === ',') setComment(trimmedNextComment.slice(1)?.trim())
+      else setComment(trimmedNextComment)
+      
+      setActivePresets(prevPresets => prevPresets.filter(p => p !== preset))
+      
+      return
+    }
+    
+    const trimmedComment = comment?.trim()
+    
+    if (!trimmedComment) setComment(preset)
+    else {
+      const comma = trimmedComment[trimmedComment.length - 1] === ',' ? ' ' : ','
+      setComment(`${trimmedComment}${comma} ${preset}`)
+    }
+    
+    setActivePresets(prevPresets => [...prevPresets, preset])
+  }
+  
+  
   const onChangeDays = (e) => {
     if (Number(e?.target?.value) > 999) return
     
@@ -192,6 +227,18 @@ const NewBooking = () => {
   const onChangeComment = (e) => {
     setComment(e.target.value)
   }
+  
+  const onBlurComment = (e) => {
+    const newComment = e.target.value?.trim()
+    
+    if (!newComment) setActivePresets([])
+    
+    const nextActivePresets = activePresets.filter(preset => newComment.includes(preset))
+    
+    setActivePresets(nextActivePresets)
+    setComment(newComment)
+  }
+  
   
   return (
     <div className={styles.requestSitting}>
@@ -265,8 +312,20 @@ const NewBooking = () => {
         className={styles.textarea}
         value={comment}
         onChange={onChangeComment}
+        onBlur={onBlurComment}
         id='comment'
       />
+      
+      <div className={styles.additionalInfoPresetsWrapper}>
+        {additionalInfoPresets.map(preset => (
+          <div
+            className={classnames(styles.additionalInfoPresetTile, activePresets.includes(preset) && styles.additionalInfoPresetTileActive)}
+            onClick={() => handleAdditionalInfoPresetClick(preset)}
+          >
+            {preset}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
