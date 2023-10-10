@@ -104,7 +104,7 @@ export default function ModalBookingsList(props) {
           </div>
         </div>
   
-        {bookings && bookings.length && (
+        {bookings && Boolean(bookings.length) && (
           <div className={styles.bookingsWrapper} ref={animationParent}>
             {bookings.map(booking => (
               <SlidingItem
