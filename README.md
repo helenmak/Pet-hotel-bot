@@ -1,6 +1,6 @@
 # Pet hotel Bot
 
-The bot for the Telegram Mini App contest.
+*The bot for the Telegram Mini App contest.*
 
 
 The application is divided into two main parts:
